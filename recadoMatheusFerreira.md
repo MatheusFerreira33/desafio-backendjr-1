@@ -1,15 +1,12 @@
 Olá, ao fazer um clone do repositorio abra o terminal dentro da pasta server e nele da o seguinte comando:
 
-npm install
-isso vai instalar todas as bibliotecas do nodeJs
+"npm install" ( sem as aspas )
 
-e depois execute: 
+isso vai instalar todas as bibliotecas do nodeJs e depois execute:
 
-npm run dev
-Se no seu terminal aparecer: "Server is running port:3000" significa que o projeto ja esta funcionando.
+"npm run dev"  ( sem as aspas ) 
 
-Esse comando vai iniciar o servidor, e importante fazer isso antes de fazer os upload dos arquivos
-
+Se no seu terminal aparecer: "Server is running port:3000" significa que o projeto ja esta funcionando. Esse comando vai iniciar o servidor, e importante fazer isso antes de fazer os upload dos arquivos
 
 
 

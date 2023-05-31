@@ -83,3 +83,13 @@ main{
     display: none;
 }
 
+
+#error{
+    position: absolute;
+    margin-top: -35px;
+    color: red;
+    font-family: 'Inter',sans-serif;
+    font-weight: bolder;
+    display: none;
+}
+

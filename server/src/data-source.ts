@@ -17,6 +17,10 @@ const settings = ():DataSourceOptions=>{
 
 /*
     USANDO O BANCO DE DADOS MYSQL
+    Abra o terminal dentro da pasta server e coloque o seguinte comando:
+    npm run typeorm migration:run -- -d ./src/data-source
+
+    e depois: npm run dev
 
     return{
         type: 'mysql',

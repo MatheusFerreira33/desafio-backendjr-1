@@ -6,13 +6,15 @@ uploadForm.addEventListener('submit', async (e) => {
   const message = document.getElementById('message');
 
   const file = fileInput.files[0];
+  
+  if(file.type === 'text/csv'){
 
-  const formData = new FormData();
+    const formData = new FormData();
 
-  formData.append('csvFile', file);
+    formData.append('csvFile', file);
 
-  try {
-    const response = await fetch('http://localhost:3000/user', {
+    try {
+      const response = await fetch('http://localhost:3000/user', {
       method: 'POST',
       body: formData,
     });
@@ -25,9 +27,21 @@ uploadForm.addEventListener('submit', async (e) => {
     message.style= 'display:flex;'
 
     setTimeout(()=>{message.style = 'display:none;'},1000);
+    setTimeout(()=>{location.reload()},2000);
 
     
   } catch (error) {
     console.error('Erro:', error);
   }
+
+
+}else{
+  const error = document.getElementById('error');
+  error.style = 'display:flex;';
+
+  setTimeout(()=>{error.style = 'display:none;'},1000);
+
+}
+
+
 });
