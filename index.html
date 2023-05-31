@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Desafio Byecar </title>
+        <link rel="stylesheet" href="./src/styles/style.css">
+    </head>
+<body>
+
+    <header>
+        <img src="./src/img/logo_byecar.png" id="img">
+    </header>
+
+    <main>
+        <p id="message">Upload feito com sucesso</p>
+        <p id="error">Arquivo não e do tipo .csv</p>
+        <div class="divForm">
+            <p>Escolha um arquivo para upload<br>( somente arquivos .csv )</p>
+
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="csvFile" name="csvFile" accept=".csv"><br><br>
+
+                <button type="submit" id="uploadButton">UPLOAD</button>
+              </form>
+
+        </div>
+    </main>
+      
+
+<script src="./src/scripts/script.js"></script>
+
+</body>
+</html>
