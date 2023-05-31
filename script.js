@@ -1,23 +1,30 @@
+const uploadForm = document.getElementById('uploadForm');
 
+uploadForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const fileInput = document.getElementById('csvFile');
 
-const sumbit = document.getElementById('button')
+  const file = fileInput.files[0];
 
-sumbit.addEventListener('click',(e)=>{
-    e.preventDefault()
-    const file = document.getElementById('file');
+  const formData = new FormData();
 
-    /*
-    const fileToRead = file.files[0];
-    const fileReader = new FileReader();
+  formData.append('csvFile', file);
 
-    fileReader.readAsText(fileToRead)
-    fileReader.onload = ()=>{
-        const data = fileReader.result;
-        console.log(data)
+  try {
+    const response = await fetch('http://localhost:3000/user', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error('Erro ao enviar o arquivo.');
     }
-    */
 
-   
+    const data = await response.json();
+    console.log(data.message);
+
     
-})
-
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+});
