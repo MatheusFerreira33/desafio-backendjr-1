@@ -3,6 +3,7 @@ const uploadForm = document.getElementById('uploadForm');
 uploadForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const fileInput = document.getElementById('csvFile');
+  const message = document.getElementById('message');
 
   const file = fileInput.files[0];
 
@@ -21,7 +22,9 @@ uploadForm.addEventListener('submit', async (e) => {
     }
 
     const data = await response.json();
-    console.log(data.message);
+    message.style= 'display:flex;'
+
+    setTimeout(()=>{message.style = 'display:none;'},1000);
 
     
   } catch (error) {

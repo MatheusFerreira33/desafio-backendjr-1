@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/** CABEÇALHO*/
+body{
+    font-family: 'Inter',sans-serif;
+}
+header{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px
+}
+
+#img{
+   min-width: 250px;
+   width: 50px;
+   
+}
+
+/** CONTEUDO PRINCIPAL */
+
+main{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.divForm{
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    padding-top: -250px;
+    flex-direction: column;
+    justify-content: center;
+}
+.divForm:hover{
+    border: 2px solid #4DBCE9;
+}
+
+.divForm p{
+    height: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divForm form{
+    display: flex;
+    margin-top: 70px;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divForm form input[type='file']{
+ font-size: 16px;
+ height: 50px;
+ cursor: pointer;
+}
+
+.divForm form #uploadButton{
+    background-color: #4DBCE9;
+    border: none;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Inter',sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#message{
+    position: absolute;
+    margin-top: -15px;
+    color: green;
+    font-family: 'Inter',sans-serif;
+    font-weight: bolder;
+    display: none;
+}
+

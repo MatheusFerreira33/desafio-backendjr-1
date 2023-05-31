@@ -1,19 +1,30 @@
 <html>
     <head>
-        <title> Desafio </title>
+        <title> Desafio Byecar </title>
+        <link rel="stylesheet" href="./src/styles/style.css">
     </head>
 <body>
 
+    <header>
+        <img src="./src/img/logo_byecar.png" id="img">
+    </header>
 
-    <h1>Desafio</h1>
+    <main>
+        <p id="message">Upload feito com sucesso</p>
+        <div class="divForm">
+            <p>Escolha um arquivo para upload<br>( somente arquivos .csv )</p>
 
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" id="csvFile" name="csvFile" accept=".csv">
-        <button type="submit" id="uploadButton">Enviar</button>
-      </form>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="csvFile" name="csvFile" accept=".csv"><br><br>
+
+                <button type="submit" id="uploadButton">UPLOAD</button>
+              </form>
+
+        </div>
+    </main>
       
 
-<script src="./script.js"></script>
+<script src="./src/scripts/script.js"></script>
 
 </body>
 </html>
